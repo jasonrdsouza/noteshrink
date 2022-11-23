@@ -1,7 +1,7 @@
 noteshrink
 ==========
 
-Convert scans of handwritten notes to beautiful, compact PDFs -- see full writeup at <https://mzucker.github.io/2016/09/20/noteshrink.html>
+Convert scans of handwritten notes to beautiful, compact PDFs
 
 ## Requirements
 
@@ -10,25 +10,26 @@ Convert scans of handwritten notes to beautiful, compact PDFs -- see full writeu
  - SciPy
  - ImageMagick
  - Image module from PIL or Pillow
+ - OpenCV
 
 ## Usage
 
+Noteshrink:
 ```
 ./noteshrink.py IMAGE1 [IMAGE2 ...]
+
+# example with params
+./noteshrink.py -g -w -s 20 -v 30 -p 20 -o recipebook.pdf recipebook.jpg
 ```
 
-Building the examples (already in `example_output`):
-
+Adaptive Threshold:
 ```
-make
+./adaptiveThreshold.py -i recipe.jpg
 ```
 
-## Packages
-Packages are available for:
- - [Arch Linux (AUR)](https://aur.archlinux.org/packages/noteshrink/)
- 
-## Derived works
+## References
 
-*Note:* Projects listed here aren't necessarily tested or endorsed by me -- use with care!
+- Original writeup: https://mzucker.github.io/2016/09/20/noteshrink.html
+- Original noteshrink code: https://github.com/mzucker/noteshrink
+- Original image thresholding code: https://github.com/pedrofrodenas/image-thresholding-OCR
 
-  - [Web-based (Django) front-end](https://github.com/delneg/noteshrinker-django)
